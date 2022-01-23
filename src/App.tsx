@@ -1,8 +1,15 @@
-import React from 'react';
+import Backdrop from './components/Backdrop';
+import DeleteModal from './components/DeleteModal';
+import ToDoBlock from './components/ToDoBlock';
 
 function App() {
   return (
-    <div>Hello</div>
+    <main className='main'>
+      <p className="title">To Do List</p>
+      <ToDoBlock />
+      <Backdrop/>
+      <DeleteModal/>
+    </main>
   );
 }
 
