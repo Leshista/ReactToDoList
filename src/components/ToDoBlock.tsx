@@ -11,7 +11,7 @@ export default function ToDoBlock() {
         <ToDoItem/>
         <ToDoItem/>
         <ToDoItem/>
-        <ToDoItem/>
+        <ToDoItem />
     </section>
     ) 
 }
