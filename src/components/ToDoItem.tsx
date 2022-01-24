@@ -1,9 +1,14 @@
-import { useState } from "react"
+import React, {FC, useState } from "react"
 
 import Backdrop from './Backdrop';
 import DeleteModal from './DeleteModal';
 
-export default function ToDoItem() {
+interface ToDoItemProps{
+    task: string;
+}
+
+
+const ToDoItem:FC<ToDoItemProps> = (props) =>{
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -26,3 +31,5 @@ export default function ToDoItem() {
     </div>
     )
 }
+
+export default ToDoItem;

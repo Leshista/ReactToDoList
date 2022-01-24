@@ -1,8 +1,8 @@
-import Backdrop from './components/Backdrop';
-import DeleteModal from './components/DeleteModal';
+import React, {FC} from 'react';
+
 import ToDoBlock from './components/ToDoBlock';
 
-function App() {
+const App:FC = () => {
   
   return (
     <main className='main'>

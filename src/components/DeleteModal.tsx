@@ -1,7 +1,12 @@
+import React, {FC} from 'react';
+
 import './DeleteModal.css'
 
+interface DeleteModalProps{
+    onClick: ()=> void;
+}
 
-export default function DeleteModal(props: any) {
+const DeleteModal:FC<DeleteModalProps> = (props) =>{
 
     const confirmHandler = () =>{
         props.onClick()
@@ -23,3 +28,4 @@ export default function DeleteModal(props: any) {
         </div>
     ) 
 }
+export default DeleteModal;

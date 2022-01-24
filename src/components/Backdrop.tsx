@@ -1,5 +1,13 @@
+import React, {FC} from 'react';
+
 import './Backdrop.css'
 
-export default function Backdrop(props:any) {
+interface BackdropProps{
+    onClick: () => void;
+}
+
+const Backdrop:FC<BackdropProps> = (props) => {
     return <div className="backdrop" onClick={props.onClick}/>
 }
+
+export default Backdrop
