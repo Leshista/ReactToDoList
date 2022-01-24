@@ -20,7 +20,7 @@ const ToDoItem:FC<ToDoItemProps> = (props) =>{
         setModalIsOpen(false)
     }
 
-    const changeHandler = (event:ChangeEvent<HTMLInputElement>) => {
+    const changeHandler = (event:ChangeEvent<HTMLInputElement>): void => {
         props.setTask(event.target.value)
     }
 
