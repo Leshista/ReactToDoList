@@ -16,7 +16,7 @@ const handleAddNew = (event:MouseEvent)=>{
         <button className="to-do-block__add-new" onClick={handleAddNew}>Add new</button>
         <button className="to-do-block__reset">Reset</button>
         </div>
-            <ToDoItem task={task}/>
+            <ToDoItem setTask={setTask}/>
     </section>
     ) 
 }
