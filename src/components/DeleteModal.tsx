@@ -3,13 +3,16 @@ import React, {FC} from 'react';
 import './DeleteModal.css'
 
 interface DeleteModalProps{
-    onClick: ()=> void;
+    onClick: () => void;
+    onDelete: (taskToDelete: string) => void;
+    id:any
 }
 
 const DeleteModal:FC<DeleteModalProps> = (props) =>{
 
     const confirmHandler = () =>{
         props.onClick()
+        props.onDelete(props.id)
     }
 
     const cancelHandler = () => {
