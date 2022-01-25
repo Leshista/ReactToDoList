@@ -1,6 +1,5 @@
 html {
     font-size: 10px;
-}
-body {
     background: linear-gradient(0deg, #fc4a1a 30%, #f7b633);
+    overflow: hidden;
 }

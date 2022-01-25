@@ -1,5 +1,4 @@
-import { FC, MouseEvent, ReactElement } from "react";
-import { isNullishCoalesce } from "typescript";
+import { FC, ReactElement } from "react";
 import '../componentsStyles/css/Todo.css'
 import TodoProps from "../interfaces/TodoProps";
 
