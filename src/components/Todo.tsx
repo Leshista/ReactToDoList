@@ -2,11 +2,11 @@ import { FC, ReactElement } from "react";
 import '../componentsStyles/css/Todo.css'
 import TodoProps from "../interfaces/TodoProps";
 
-const Todo: FC<TodoProps> = (text): ReactElement => {
+const Todo: FC<TodoProps> = ({text, id, completed}): ReactElement => {
     return (
-    <div className="todo">
+    <div className="todo" id= {String(id)}>
         <input type="checkbox" className="todo__checkbox"/>
-            <p className="todo__text">{text.text}</p>
+            <p className="todo__text">{text}</p>
             <button className="todo__delete">X</button>
         </div>
     )

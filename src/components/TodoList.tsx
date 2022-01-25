@@ -6,7 +6,14 @@ import Todo from './Todo';
 const TodoList: FC<ToDoListProps> = ({todos}): ReactElement => {
     return (
         <div className='todo-list'>
-            {todos.map(todo => todo.text != ''?<Todo text={todo.text} key={todos.indexOf(todo)} />: null)}
+            {todos.map(todo => todo.text != '' ?
+                <Todo
+                    text={todo.text}
+                    id={todo.id}
+                    completed={todo.completed}
+                    key={todos.indexOf(todo)} />
+                :
+                null)}
         </div>
     )
 };
