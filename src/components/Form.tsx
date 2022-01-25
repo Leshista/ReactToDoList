@@ -12,11 +12,12 @@ const Form: FC<FormProps> = ({ inputText, setInputText, todos,setTodos}): ReactE
         setTodos([
             ...todos, {text:inputText, completed:false, id: currentId}
         ]);
+        setInputText('');
     };
 
     return (
         <form className='todo-form'>
-            <input type="text" className="todo-form__input" onChange={inputTextHandler} />
+            <input type="text" value={inputText} className="todo-form__input" onChange={inputTextHandler} />
             <button className="todo-form__button" type="submit" onClick={submitTodoHandler}>+</button>
             <div className="todo-form__select">
                 <select name="todos" className="todo-form__filter">
