@@ -1,7 +1,13 @@
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 
-const TodoList: FC = () => {
-    return <div></div>
+const TodoList: FC = ():ReactElement => {
+    return (
+        <div className='todo-container'>
+            <ul className="todo-list">
+
+            </ul>
+        </div>
+    ) 
 }
 
 export default TodoList
