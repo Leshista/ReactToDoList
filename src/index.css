@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 html {
     font-size: 10px;
     background: linear-gradient(0deg, #fc4a1a 30%, #f7b633);
-    overflow: hidden;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
 }
