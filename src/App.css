@@ -1,0 +1,14 @@
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    position: relative;
+    top: 10vh;
+}
+.main {
+    position: relative;
+    top: 10vh;
+}

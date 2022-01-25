@@ -8,8 +8,9 @@ const Form: FC<FormProps> = ({ inputText, setInputText, todos,setTodos}): ReactE
     };
     const submitTodoHandler = (e: MouseEvent<HTMLButtonElement>): void => {
         e.preventDefault();
+        const currentId = todos.length
         setTodos([
-            ...todos, {text:inputText, completed:false}
+            ...todos, {text:inputText, completed:false, id: currentId}
         ]);
     };
 
