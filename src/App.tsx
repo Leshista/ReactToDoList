@@ -13,8 +13,15 @@ const App: FC = (): ReactElement => {
         <h1 className="title">React To Do List</h1>
       </header>
       <main className="main">
-        <Form inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos} />
-        <TodoList />
+        <Form
+          inputText={inputText}
+          setInputText={setInputText}
+          todos={todos}
+          setTodos={setTodos}
+        />
+        <TodoList
+          todos={todos}
+        />
       </main>
     </div>
   );
