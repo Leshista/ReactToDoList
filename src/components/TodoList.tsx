@@ -3,10 +3,10 @@ import '../componentsStyles/css/TodoList.css'
 import ToDoListProps from '../interfaces/ToDoListProps';
 import Todo from './Todo';
 
-const TodoList: FC<ToDoListProps> = ({todos, setTodos}): ReactElement => {
+const TodoList: FC<ToDoListProps> = ({todos, setTodos, filteredTodos}): ReactElement => {
     return (
         <div className='todo-list'>
-            {todos.map(todo => todo.text != '' ?
+            {filteredTodos.map(todo => todo.text != '' ?
                 <Todo
                     text={todo.text}
                     id={todo.id}

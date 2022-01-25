@@ -5,4 +5,9 @@ export default interface ToDoListProps{
         completed?: boolean;
     }[];
     setTodos: React.Dispatch<React.SetStateAction<{}[]>>;
+    filteredTodos: {
+        text?: string;
+        id?: number;
+        completed?: boolean;
+    }[];
 };
