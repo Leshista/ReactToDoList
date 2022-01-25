@@ -4,6 +4,7 @@ import TodoList from './components/TodoList';
 import './App.css';
 
 const App: FC = (): ReactElement => {
+  // Use States
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState<{
     text?: string
@@ -12,11 +13,26 @@ const App: FC = (): ReactElement => {
   }[]>([]);
   const [filter, setFilter] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState<{}[]>([]);
-
+  // Run once when app starts
+  useEffect(() => {
+    getLocalTodos()
+  }, [])
+// Use Effects
   useEffect(() => {
     filteredHandler()
+    saveLocalTodos()
   }, [todos, filter])
-
+//Save to local storage
+  const saveLocalTodos = () => localStorage.setItem('todos', JSON.stringify(todos));
+  const getLocalTodos = () => {
+    if (!localStorage.getItem('todos')) {
+      localStorage.setItem('todos', JSON.stringify([]))
+    } else {
+      const localTodos = JSON.parse(localStorage.getItem('todos') || '')
+      setTodos(localTodos)
+    }
+}
+  // Handlers
   const filteredHandler = (): void => {
     switch (filter) {
       case 'completed':
