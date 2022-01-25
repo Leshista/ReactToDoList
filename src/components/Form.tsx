@@ -1,16 +1,22 @@
-import { ChangeEvent, FC, ReactElement } from 'react'
-import '../componentsStyles/css/Form.css'
-import FormProps from '../interfaces/FormProps'
+import { ChangeEvent, MouseEvent, FC, ReactElement } from 'react';
+import '../componentsStyles/css/Form.css';
+import FormProps from '../interfaces/FormProps';
 
-const Form: FC<FormProps> = ({setInputText}): ReactElement => {
-    const inputTextHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setInputText(e.target.value)
-    }
+const Form: FC<FormProps> = ({ setInputText, setTodos, todos }): ReactElement => {
+    const inputTextHandler = (e: ChangeEvent<HTMLInputElement>): void => {
+        setInputText(e.target.value);
+    };
+    const submitTodoHandler = (e: MouseEvent<HTMLButtonElement>): void => {
+        e.preventDefault();
+        setTodos([
+            ...todos, {}
+        ]);
+    };
 
     return (
         <form className='todo-form'>
-            <input type="text" className="todo-form__input" onChange={inputTextHandler}/>
-            <button className="todo-form__button" type="submit">+</button>
+            <input type="text" className="todo-form__input" onChange={inputTextHandler} />
+            <button className="todo-form__button" type="submit" onClick={submitTodoHandler}>+</button>
             <div className="todo-form__select">
                 <select name="todos" className="todo-form__filter">
                     <option value="all">All</option>
@@ -20,6 +26,6 @@ const Form: FC<FormProps> = ({setInputText}): ReactElement => {
             </div>
         </form>
     )
-}
+};
 
-export default Form
+export default Form;
