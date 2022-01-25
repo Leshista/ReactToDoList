@@ -3,4 +3,5 @@ export default interface FormProps{
     setInputText: React.Dispatch<React.SetStateAction<string>>;
     todos: {}[];
     setTodos: React.Dispatch<React.SetStateAction<{}[]>>;
+    setFilter:React.Dispatch<React.SetStateAction<string>>
 }

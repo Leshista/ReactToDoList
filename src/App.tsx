@@ -6,6 +6,7 @@ import './App.css';
 const App: FC = (): ReactElement => {
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState<{}[]>([]);
+  const [filter, setFilter] = useState('all')
 
   return (
     <div className='app'>
@@ -18,6 +19,7 @@ const App: FC = (): ReactElement => {
           setInputText={setInputText}
           todos={todos}
           setTodos={setTodos}
+          setFilter={setFilter}
         />
         <TodoList
           setTodos={setTodos}
