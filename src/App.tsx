@@ -20,6 +20,7 @@ const App: FC = (): ReactElement => {
           setTodos={setTodos}
         />
         <TodoList
+          setTodos={setTodos}
           todos={todos}
         />
       </main>
