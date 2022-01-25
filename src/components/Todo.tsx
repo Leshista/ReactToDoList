@@ -9,13 +9,13 @@ const Todo: FC<TodoProps> = ({ text, id, completed, todo, todos, setTodos }): Re
     }
     
     const checkHandler = () => {
-        setTodos(todos.map(e => e.id === todo.id? {...e, completed: !e.completed}:{...e}))
+        setTodos(todos.map(e => e.id === todo.id? {...e, completed: !e.completed}:e))
     }
 
     return (
     <div className="todo" id= {String(id)}>
-        <input type="checkbox" className="todo__checkbox" onChange={checkHandler}/>
-            <p className="todo__text">{text}</p>
+        <input type="checkbox" className={'todo__checkbox'}onChange={checkHandler}/>
+            <p className={`todo__text${completed ? ' checked' : ''}` }>{text}</p>
             <button className="todo__delete" onClick={deleteHandler}>X</button>
         </div>
     )
