@@ -1,6 +1,11 @@
-export default interface TodoProps{
+import ToDoListProps from "./ToDoListProps";
+export default interface TodoProps extends ToDoListProps{
     text: string | undefined;
     id: number | undefined;
     completed: boolean | undefined;
-    setTodos: React.Dispatch<React.SetStateAction<{}[]>>;
+    todo: {
+        text?: string | undefined;
+        id?: number | undefined;
+        completed?: boolean | undefined;
+    }
 }

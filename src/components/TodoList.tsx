@@ -13,6 +13,8 @@ const TodoList: FC<ToDoListProps> = ({todos, setTodos}): ReactElement => {
                     completed={todo.completed}
                     key={todos.indexOf(todo)}
                     setTodos={setTodos}
+                    todos={todos}
+                    todo={todo}
                 />
                 :
                 null)}
