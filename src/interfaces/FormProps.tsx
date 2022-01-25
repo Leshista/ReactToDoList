@@ -1,5 +1,6 @@
 export default interface FormProps{
+    inputText: string;
     setInputText: React.Dispatch<React.SetStateAction<string>>;
-    setTodos: React.Dispatch<React.SetStateAction<{}[]>>;
     todos: {}[];
+    setTodos: React.Dispatch<React.SetStateAction<{}[]>>;
 }

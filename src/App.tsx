@@ -12,7 +12,7 @@ const App: FC = (): ReactElement => {
         <h1 className="title">React To Do List</h1>
       </header>
       <main className="main">
-        <Form setInputText={setInputText} setTodos={setTodos} todos={todos} />
+        <Form inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos} />
         <TodoList />
       </main>
     </div>

@@ -2,14 +2,14 @@ import { ChangeEvent, MouseEvent, FC, ReactElement } from 'react';
 import '../componentsStyles/css/Form.css';
 import FormProps from '../interfaces/FormProps';
 
-const Form: FC<FormProps> = ({ setInputText, setTodos, todos }): ReactElement => {
+const Form: FC<FormProps> = ({ inputText, setInputText, todos,setTodos}): ReactElement => {
     const inputTextHandler = (e: ChangeEvent<HTMLInputElement>): void => {
         setInputText(e.target.value);
     };
     const submitTodoHandler = (e: MouseEvent<HTMLButtonElement>): void => {
         e.preventDefault();
         setTodos([
-            ...todos, {}
+            ...todos, {text:inputText, completed:false}
         ]);
     };
 
